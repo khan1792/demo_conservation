@@ -14,3 +14,13 @@ option = st.selectbox(
     name)
 
 search = final[final['Name'] == option]
+st.dataframe(search)
+ff = pd.DataFrame(search.mean())[1:]
+ff.columns = ['Proportion']
+ff = ff.sort_values('Proportion', ascending = False)
+ff['Topic'] = ff.index
+ff.index = range(len(ff))
+
+st.write(len(search), 'papers were funded by', option)
+st.write('This table displays the proportions of topics funded by', option, 'from large to small.')
+st.dataframe(ff, height = 800, width = 700)
