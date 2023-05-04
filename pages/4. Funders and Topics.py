@@ -14,7 +14,10 @@ option = st.selectbox(
     name)
 
 search = final[final['Name'] == option]
-ff = pd.DataFrame(search.drop(['paper_id', 'Name', 'Country', 'Type'], 1).mean())
+st.write(search.drop(['paper_id', 'Name', 'Country', 'Type'], 1).mean())
+
+
+#ff = pd.DataFrame(search.drop(['paper_id', 'Name', 'Country', 'Type'], 1).mean())
 ff.columns = ['Proportion']
 ff = ff.sort_values('Proportion', ascending = False)
 ff['Topic'] = ff.index
