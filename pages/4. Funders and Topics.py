@@ -13,5 +13,4 @@ option = st.selectbox(
     'Which funder would you like to explore?',
     name)
 
-st.write(option)
-
+search = final[final['Name'] == option]
