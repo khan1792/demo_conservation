@@ -14,7 +14,7 @@ option = st.selectbox(
     name)
 
 search = final[final['Name'] == option]
-st.write(search.drop(['paper_id', 'Name', 'Country', 'Type'], 1).mean())
+st.dataframe(search.drop(['paper_id', 'Name', 'Country', 'Type'], 1))
 
 
 #ff = pd.DataFrame(search.drop(['paper_id', 'Name', 'Country', 'Type'], 1).mean())
