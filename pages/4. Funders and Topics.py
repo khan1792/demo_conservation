@@ -13,11 +13,5 @@ option = st.selectbox(
     'Which funder would you like to explore?',
     name)
 
-search = final[final['Name'] == option]
-ff = pd.DataFrame(search.mean())[1:]
-
-
-st.write(len(search), 'papers were funded by', option)
-st.write('This table displays the proportions of topics funded by', option, 'from large to small.')
-st.dataframe(ff, height = 800, width = 700)
+st.write(option)
 
