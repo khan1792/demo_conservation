@@ -14,7 +14,7 @@ option = st.selectbox(
     name)
 
 search = final[final['Name'] == option]
-ff = pd.DataFrame(search.mean())[1:]
+ff = pd.DataFrame(search.mean(numeric_only = True))[1:]
 ff.columns = ['Proportion']
 ff = ff.sort_values('Proportion', ascending = False)
 ff['Topic'] = ff.index
