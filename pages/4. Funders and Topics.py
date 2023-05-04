@@ -10,7 +10,7 @@ name = occur['funder']
 
 
 option = st.selectbox(
-    'Which funder would you like to explore?',
+    'Which funder would you like to explore? You can type the keyword in a funder name to search',
     name)
 
 search = final[final['Name'] == option]
