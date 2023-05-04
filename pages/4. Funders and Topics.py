@@ -20,6 +20,6 @@ ff = ff.sort_values('Proportion', ascending = False)
 ff['Topic'] = ff.index
 ff.index = range(len(ff))
 
-st.write(len(search), 'papers were funded by', option, 'an organization in', set(search['Country'])[0])
+st.write(len(search), 'papers were funded by', option)
 st.write('This table displays the proportions of topics funded by', option, 'from large to small.')
 st.dataframe(ff, height = 800, width = 700)
